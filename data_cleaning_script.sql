@@ -1,5 +1,7 @@
 # identifying duplicates
-SELECT CONCAT(Country,Year), COUNT(CONCAT(Country,Year)) as cnt
+SELECT
+	CONCAT(Country,Year), 
+	COUNT(CONCAT(Country,Year)) as cnt
 FROM world_life_expectancy
 GROUP BY CONCAT(Country,Year)
 HAVING cnt > 1
